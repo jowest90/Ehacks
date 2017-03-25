@@ -56,7 +56,6 @@ public class playercontroller : MonoBehaviour {
             Rigidbody2D rigbody = GetComponent<Rigidbody2D>();
             rigbody.AddForce(jump, ForceMode2D.Impulse);
             isGrounded = false;
-            yield WaitForSeconds(3);
             isGrounded = true;
         }
         
