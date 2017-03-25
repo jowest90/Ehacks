@@ -19,3 +19,9 @@ movement- can move left and right
 
 how to win- EAT ALL THE ALIENS!
 
+Mental notes
+-asteroids
+-finsih rocket
+-more aliens(5-10)
+-title screen
+
