@@ -46,6 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\Level 1\RepeatSpriteBoundary.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\Shredder.cs" />
+     <Compile Include="Assets\Scripts\TitleButtons.cs" />
+     <Compile Include="Assets\Scripts\cameracontroller.cs" />
      <Compile Include="Assets\Scripts\playercontroller.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
