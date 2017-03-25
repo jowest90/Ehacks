@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\Level 1\prefab\SetTiles.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\Level 1\RepeatSpriteBoundary.cs">
     <Files>
-      <File FileName="Assets\Scenes\Level 1\prefab\SetTiles.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scenes\Level 1\RepeatSpriteBoundary.cs" Line="17" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
