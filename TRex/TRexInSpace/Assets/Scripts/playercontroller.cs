@@ -13,12 +13,7 @@ public class playercontroller : MonoBehaviour {
 		
 	}
 
-    //void FireProjectile()
-    //{
-    //   GameObject lazerbeam = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-    //   lazerbeam.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed, 0);
-            
-    //}
+   
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,17 +21,21 @@ public class playercontroller : MonoBehaviour {
         {
            // InvokeRepeating("FireProjectile", .000001f, firingRate);
             GameObject lazerbeam = Instantiate(projectile, transform.position, Quaternion.AngleAxis(90, Vector3.forward)) as GameObject;
-            lazerbeam.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
             Rigidbody2D rigid = lazerbeam.GetComponent<Rigidbody2D>();
-           // transform.Rotate(0, 0, lazerbeam.position.z);
-           // rigid.AddForce(transform.forward * speed);
-           // Physics.IgnoreCollision(rigid.GetComponent<Collider2D>, playercontroller.GetComponent);
+            rigid.AddForce(transform.forward * speed);
+            lazerbeam.GetComponent<Rigidbody2D>().position = new Vector3(transform.position.x + 1, transform.position.y - .15f);
+            lazerbeam.GetComponent<Rigidbody2D>().velocity = new Vector3(5, projectileSpeed);
+           
+            //transform.translate(Vector3.forward Time.deltaTime speed);
+            // transform.Rotate(0, 0, lazerbeam.position.z);
+             
+            // Physics.IgnoreCollision(rigid.GetComponent<Collider2D>, playercontroller.GetComponent);
         }
 
-        //if (Input.GetKeyUp(KeyCode.Mouse1))
-        //{
-        //    CancelInvoke("FireProjectile");
-        //}
+        if (Input.GetKey(KeyCode.E))
+        {
+          //  gameObject.GetComponent<AudioSource>().Play();
+        }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
