@@ -1,0 +1,27 @@
+Game Title: T-Rex In SPAAAAACE
+
+color-Lime green
+
+Location, SPAAAAAACE
+
+weapon- martian lazor
+
+power up - gatting lazors?
+
+enemies- aliens
+
+premise - The T-Rex has consumed all the humans, animals, and any life on earth. Hunger for more, the T-Rex grabs a rocket
+	to space to find alien life to consume. His mission, travel all the planets and consume all the aliens.
+
+movement- can move left and right
+	- can jump
+	- shoots
+
+how to win- EAT ALL THE ALIENS!
+
+Mental notes
+-asteroids
+-finsih rocket X
+-more aliens(5-10)
+-title screen ?
+
