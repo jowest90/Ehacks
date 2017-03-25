@@ -9,12 +9,21 @@ public class playercontroller : MonoBehaviour {
     public GameObject projectile;
     public float firingRate = .2f;
     public Vector3 jump;
-    public float jumpForce = 1f;
+    public float jumpForce = 20f;
     public bool isGrounded;
+    public bool jumpagain = false;
 
 	// Use this for initialization
 	void Start () {
-        jump = new Vector3(0, 1.2f, 0);
+        jump = new Vector3(0, 2f, 0);
+        isGrounded = true;
+    }
+
+    private IEnumerator JumpRefreshTime()
+    {
+        jumpagain = true;
+        yield return new WaitForSeconds(2.0f);
+        jumpagain = false;
         isGrounded = true;
     }
        
@@ -54,10 +63,9 @@ public class playercontroller : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space) && isGrounded == true)
         {
             Rigidbody2D rigbody = GetComponent<Rigidbody2D>();
-            rigbody.AddForce(jump, ForceMode2D.Impulse);
+            rigbody.AddForce(jump*jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
-            yield WaitForSeconds(3);
-            isGrounded = true;
+            StartCoroutine(JumpRefreshTime()); // needed for a delay in jumping again
         }
         
     }
