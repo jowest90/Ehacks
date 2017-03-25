@@ -28,10 +28,10 @@ public class playercontroller : MonoBehaviour {
         jumpagain = false;
         isGrounded = true;
     }
-       
+
 	// Update is called once per frame
 	void Update () {
-       
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             // InvokeRepeating("FireProjectile", .000001f, firingRate);
@@ -75,7 +75,7 @@ public class playercontroller : MonoBehaviour {
             transform.localScale = new Vector3(-2f, 2f, 2f);
             left = 1; // now go left
             right = 0; // no more right
-           
+
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -91,13 +91,13 @@ public class playercontroller : MonoBehaviour {
             //rigbody.GetComponent<AudioClip>.audio("PlayerJump.wav");
             rigbody.AddForce(jump*jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
-<<<<<<< HEAD
+//<<<<<<< HEAD
             isGrounded = true;
-=======
+//=======
             clickAudio.Play(); // play jump sound
             StartCoroutine(JumpRefreshTime()); // needed for a delay in jumping again
->>>>>>> refs/remotes/origin/master
+//>>>>>>> refs/remotes/origin/master
         }
-        
+
     }
 }
