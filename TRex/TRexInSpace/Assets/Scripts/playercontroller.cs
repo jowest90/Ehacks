@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class playercontroller : MonoBehaviour {
     public float speed = 2.0f;
-
-
 	// Use this for initialization
 	void Start () {
 		
