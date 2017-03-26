@@ -5,33 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class playercontroller : MonoBehaviour {
     public float speed = 2.0f;
+    public int curhealth;
     public float projectileSpeed;
     public GameObject projectile;
+    public float volume;
     public float firingRate = .2f;
     public Vector3 jump;
     public float jumpForce = 2f;
     public bool isGrounded;
-    public bool jumpagain = false;
-    public AudioSource clickAudio;
+    public bool jumpagain = true;
+    AudioSource clickAudio;
     public int left = 0, right = 1;
+    AudioClip jumpaudio;
+    public AudioClip clip; // for jump
+    public GameObject targetplayer; // player
 
 	// Use this for initialization
 	void Start () {
+        clickAudio = GetComponent<AudioSource>();
         jump = new Vector3(0, 1f, 0);
         isGrounded = true;
     }
 
-    private IEnumerator JumpRefreshTime()
+
+
+
+    // Update is called once per frame
+    void Update()
     {
-        jumpagain = true;
-        yield return new WaitForSeconds(2.0f);
-        jumpagain = false;
-        isGrounded = true;
-    }
-       
-	// Update is called once per frame
-	void Update () {
-       
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             // InvokeRepeating("FireProjectile", .000001f, firingRate);
@@ -66,7 +68,7 @@ public class playercontroller : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.E))
         {
-          //  gameObject.GetComponent<AudioSource>().Play();
+            //  gameObject.GetComponent<AudioSource>().Play();
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -75,7 +77,7 @@ public class playercontroller : MonoBehaviour {
             transform.localScale = new Vector3(-2f, 2f, 2f);
             left = 1; // now go left
             right = 0; // no more right
-           
+
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -85,15 +87,61 @@ public class playercontroller : MonoBehaviour {
             left = 0; // no more left
         }
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             Rigidbody2D rigbody = GetComponent<Rigidbody2D>();
             //rigbody.GetComponent<AudioClip>.audio("PlayerJump.wav");
-            rigbody.AddForce(jump*jumpForce, ForceMode2D.Impulse);
+            //AudioSource.PlayClipAtPoint(clip, Vector3.zero, 1f);
+            rigbody.AddForce(jump * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
-            clickAudio.Play(); // play jump sound
-            StartCoroutine(JumpRefreshTime()); // needed for a delay in jumping again
+            
+            
+          //  StartCoroutine(JumpRefreshTime()); // needed for a delay in jumping again
         }
-        
+
+        isGrounded = true;
+
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Shredder") {
+            Destroy(other.gameObject);
+        }
+    }
+
+    private IEnumerator JumpRefreshTime()
+    {
+        //    jumpagain = true;
+        //    yield return new WaitForSeconds(2.0f);
+        //    jumpagain = false;
+        //    isGrounded = true;
+        Rigidbody2D rigbody = GetComponent<Rigidbody2D>();
+        //rigbody.velocity = Vector2.zero;
+        //float timer = 0;
+        //float jumpTime = 0;
+        //Vector2 jumpVector = 0;
+
+        //while (jumpButtonPressed && timer < jumpTime)
+        //{
+        //Calculate how far through the jump we are as a percentage
+        //apply the full jump force on the first frame, then apply less force
+        //each consecutive frame
+
+        //float proportionCompleted = timer / jumpTime;
+        //Vector2 thisFrame = Vector2.Lerp(jumpVector, Vector2.zero, proportionCompleted);
+        //rigbody.AddForce(thisFrame);
+        //timer += Time.deltaTime;
+        yield return null;
+        //}
+
+        isGrounded = true;
+    }
+
+    //void OnCollisionEnter2D(Collider2D collision)
+    //{
+    //    if(collision.gameObject.tag == "Player")
+    //    Destroy(collision.gameObject);
+    //}
+
 }
