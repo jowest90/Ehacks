@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Test Room/Test Room.unity
-=======
-- path: Assets/Scenes/Level 1.unity
->>>>>>> refs/remotes/origin/Adam-branch
   isLoaded: 1
   isActive: 1
