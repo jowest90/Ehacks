@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TitleButtons : MonoBehaviour {
-  /*
+	/*
     public Button button;
 
 <<<<<<< HEAD
@@ -28,6 +28,4 @@ public class TitleButtons : MonoBehaviour {
     }
 <<<<<<< HEAD
     */
-=======
->>>>>>> refs/remotes/origin/Adam-branch
 }
