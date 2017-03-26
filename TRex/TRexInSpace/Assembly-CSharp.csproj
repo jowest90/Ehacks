@@ -46,12 +46,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scenes\Level 1\RepeatSpriteBoundary.cs" />
+     <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript1.cs" />
+     <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Shredder.cs" />
      <Compile Include="Assets\Scripts\TitleButtons.cs" />
      <Compile Include="Assets\Scripts\cameracontroller.cs" />
+     <Compile Include="Assets\Scripts\enemyhealth.cs" />
+     <Compile Include="Assets\Scripts\laserhit.cs" />
      <Compile Include="Assets\Scripts\playercontroller.cs" />
+     <Compile Include="Assets\Scripts\playerheath.cs" />
+     <Compile Include="Assets\enemydamage.cs" />
+     <Compile Include="Assets\playerheath.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

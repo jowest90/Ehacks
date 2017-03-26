@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class playercontroller : MonoBehaviour {
-    public float speed = 2.0f;
+public float speed = 2.0f;
     public int curhealth;
     public float projectileSpeed;
     public GameObject projectile;
@@ -143,5 +143,4 @@ public class playercontroller : MonoBehaviour {
     //    if(collision.gameObject.tag == "Player")
     //    Destroy(collision.gameObject);
     //}
-
 }
