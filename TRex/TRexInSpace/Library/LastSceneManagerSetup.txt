@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Tittle Screens/Title Screen.unity
+- path: Assets/Scenes/Level 1 Moon/mars.unity
   isLoaded: 1
   isActive: 1
