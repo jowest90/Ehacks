@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerhealth : MonoBehaviour {
-    public float fullhealth;
+  
+    public float fullhealth = 2;
     float currenthealth;
     public GameObject deathFX;
     playercontroller controlMovement;
@@ -13,15 +14,15 @@ public class playerhealth : MonoBehaviour {
         currenthealth = fullhealth;
         controlMovement = GetComponent<playercontroller>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     public void addamage(float damage)
     {
-        
+
         if (damage <= 0)
         {
             return;

@@ -12,10 +12,10 @@ public class enemydamage : MonoBehaviour {
 	void Start () {
         nextDamage = 0f;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     private void OnTriggerStay2D(Collider2D other)
